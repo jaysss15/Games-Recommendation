@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games Recommendation</title>
+    <style>
+	h1{
+	font-family: georgia;
+	color: white;
+	text-align: center;
+	font-size: 60px;
+	}
+	
+	h2{
+	text-align:center;
+	color: white;
+	font-family: arial;
+	font-size: 40px;
+
+
+	}
+	h3{
+	text-align:center;
+	color: white;
+	font-family: arial;
+	font-size: 30px;
+
+
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            background-size: full;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+	    background-image: url('static/images/galaxy.jpg');
+        }
+
+       
+
+        form {
+            margin: 20px auto;
+            width: 300px;
+            background-color: #3d3c3c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="reset"] {
+            background-color: #999;
+            margin-left: 10px;
+        }
+
+        img {
+    display: block;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 5px;
+    border: 2px solid red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+
+<h1>Games Recommendation</h1>
+<h3>Generate a Games you like</h3>
+
+<form action="/" method="post">
+    <label>Action:</label>
+    <input type="text" name="action">
+    <br>
+    <label>Strategy:</label>
+    <input type="text" name="strategy">
+    <br>
+    <label>Fantasy:</label>
+    <input type="text" name="fantasy">
+    <br>
+    <label>Adventure:</label>
+    <input type="text" name="adventure">
+    <br>
+    <button type="submit">Submit</button>
+    <button type="reset" name="reset">Clear</button>
+</form>
+
+<h2>{{"Recommended Game For You!"}}</h2>
+<br>
+<img src="{{url_for('static', filename='images/'+ firstname)}}">
+</body>
+</html>
